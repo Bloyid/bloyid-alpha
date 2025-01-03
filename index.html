@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloyid Alpha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login/Register</h2>
+        <input type="text" id="username-input" placeholder="Enter your username" />
+        <button id="login-button">Join Chat</button>
+        <p id="login-error" style="color: #ff4444; display: none; margin-top: 1rem;">Username already taken. Try another.</p>
+    </div>
+
+    <div id="chat-container">
+        <div id="user-list"></div>
+        <div id="chat-window">
+            <div id="messages"></div>
+            <div id="chat-input">
+                <input type="text" id="message-input" placeholder="Type a message..." />
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dm-container">
+        <div class="dm-header">
+            <span id="dm-recipient"></span>
+            <button id="close-dm">×</button>
+        </div>
+        <div id="dm-messages"></div>
+        <div id="dm-input">
+            <input type="text" id="dm-message-input" placeholder="Type a private message..." />
+            <button id="dm-send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.10/marked.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
